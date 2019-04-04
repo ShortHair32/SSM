@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 $(function(){
 	var initUrl='/o2o/shopadmin/getshopinitinfo';
 	var registerShopUrl='/o2o/shopadmin/registershop';
@@ -8,8 +6,8 @@ $(function(){
 	function getShopInitInfo(){
 		$.getJSON(initUrl,function(data){
 			if(data.success){
-				var tempHtml='';
-				var tempAreHtml='';
+				var tempHtml="";
+				var tempAreaHtml="";
 				data.shopCategoryList.map(function(item,index){
 					tempHtml+='<option data-id="'+item.shopCategoryId+'">'
 					+item.shopCategoryName+'</option>';
@@ -18,10 +16,11 @@ $(function(){
 					tempAreaHtml+='<option data-id="'+item.areaId+'">'
 					+item.areaName+'</option>';
 				});
-				$('#shop-category').html(tempHtml);
-				$('#area').html(tempAreaHtml);
+				$("#shop-category").html(tempHtml);
+				$("#area").html(tempAreaHtml);
 			}
 		});
+		}
 		$('#submit').click(function(){
 			var shop={};
 			shop.shopName=$('#shop-name').val();
@@ -41,7 +40,13 @@ $(function(){
 			var shopImg=$('#shop-img')[0].files[0];
 			var formData =new FormData();
 			formData.append('shopImg',shopImg);
-			formDtat.append('shopStr',JSON.stringify(shop));
+			formData.append('shopStr',JSON.stringify(shop));
+			var verfyCodeActual=$('#j_captcha').val();
+			if(!cerfyCodeActual){
+				$.toast('请输入验证码！');
+				return;
+			}
+			formData.append('verfyCodeActual',verifyCodeActual);
 			$.ajax({
 				url:registerShopUrl,
 				type:'POST',
@@ -58,5 +63,4 @@ $(function(){
 				}
 			});
 		});
-	}
-})
+});

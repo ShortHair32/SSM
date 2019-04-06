@@ -1,6 +1,12 @@
-2019-04-04 15:36:21.655{main}DEBUGcom.imooc.o2o.dao.ShopDao.insertShop-==>  Preparing: INSERT INTO tb_shop(owner_id,area_id,shop_category_id, shop_name,shop_desc,shop_addr,phone,shop_img,priority, create_time,last_edit_time,enable_status,advice) VALUES (?,?,?, ?,?,?,?,?, ?,?,?, ?,?) 
-2019-04-04 15:36:21.738{main}DEBUGcom.imooc.o2o.dao.ShopDao.insertShop-==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺3(String), test3(String), test3(String), test3(String), test3(String), null, 2019-04-04 15:36:21.624(Timestamp), 2019-04-04 15:36:21.624(Timestamp), 0(Integer), 审核中(String)
-2019-04-04 15:36:21.762{main}DEBUGcom.imooc.o2o.dao.ShopDao.insertShop-<==    Updates: 1
-2019-04-04 15:36:23.180{main}DEBUGcom.imooc.o2o.dao.ShopDao.updateShop-==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
-2019-04-04 15:36:23.182{main}DEBUGcom.imooc.o2o.dao.ShopDao.updateShop-==> Parameters: 测试的店铺3(String), test3(String), test3(String), test3(String), \upload\item\shop8\2019040415362120465.jpg(String), 2019-04-04 15:36:21.624(Timestamp), 0(Integer), 审核中(String), 2(Integer), 1(Long), 8(Long)
-2019-04-04 15:36:23.196{main}DEBUGcom.imooc.o2o.dao.ShopDao.updateShop-<==    Updates: 1
+2019-04-06 12:31:03.266{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id AND s.shop_id=? 
+2019-04-06 12:31:03.320{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-==> Parameters: 1(Long)
+2019-04-06 12:31:03.473{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-<==      Total: 1
+2019-04-06 13:57:01.246{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id AND s.shop_id=? 
+2019-04-06 13:57:01.293{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-==> Parameters: 1(Long)
+2019-04-06 13:57:01.357{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-<==      Total: 1
+2019-04-06 13:57:02.686{main}DEBUGcom.imooc.o2o.dao.ShopDao.updateShop-==>  Preparing: update tb_shop SET shop_name=?, shop_img=?, last_edit_time=? where shop_id=? 
+2019-04-06 13:57:02.689{main}DEBUGcom.imooc.o2o.dao.ShopDao.updateShop-==> Parameters: 修改后的店铺名称(String), \upload\item\shop1\2019040613570189411.jpg(String), 2019-04-06 13:57:02.599(Timestamp), 1(Long)
+2019-04-06 13:57:03.070{main}DEBUGcom.imooc.o2o.dao.ShopDao.updateShop-<==    Updates: 1
+2019-04-06 13:57:03.071{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id AND s.shop_id=? 
+2019-04-06 13:57:03.072{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-==> Parameters: 1(Long)
+2019-04-06 13:57:03.074{main}DEBUGcom.imooc.o2o.dao.ShopDao.queryByShopId-<==      Total: 1

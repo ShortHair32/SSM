@@ -3,7 +3,7 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.imooc.o2o.dao.ShopDao">
-	<resultMap type="com.imooc.o2o.entity.Shop" id="shop_id">
+	<resultMap type="com.imooc.o2o.entity.Shop" id="shopMap">
 		<id column="shop_id" property="shopId" />
 		<result column="shop_name" property="shopName" />
 		<result column="shop_desc" property="shopDesc" />

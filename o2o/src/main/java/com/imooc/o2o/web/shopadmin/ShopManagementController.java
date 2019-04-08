@@ -49,6 +49,7 @@ public class ShopManagementController {
 	@Autowired
 	private AreaService areaService;
 	@RequestMapping(value="/getshopmanagementinfo",method=RequestMethod.GET)
+	@ResponseBody
 	private Map<String, Object> getShopManagementInfo(HttpServletRequest request){
 		Map<String, Object> modelMap=new HashMap<String,Object>();
 		long shopId=HttpServletRequestUtil.getLong(request,"shopId");

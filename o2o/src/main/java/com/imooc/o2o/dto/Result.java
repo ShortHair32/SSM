@@ -12,7 +12,7 @@ public Result(boolean success,T data) {
 	this.success=success;
 	this.data=data;
 }
-public Result(boolean success,int errorCode,String errMsg) {
+public Result(boolean success,int errorCode,String errorMsg) {
 	this.success=success;
 	this.errorMsg=errorMsg;
 	this.errorCode=errorCode;
@@ -22,5 +22,23 @@ public boolean isSuccess() {
 }
 public void setSuccess(boolean success) {
 	this.success=success;
+}
+public T getData() {
+	return data;
+}
+public void setData(T data) {
+	this.data = data;
+}
+public String getErrorMsg() {
+	return errorMsg;
+}
+public void setErrorMsg(String errorMsg) {
+	this.errorMsg = errorMsg;
+}
+public int getErrorCode() {
+	return errorCode;
+}
+public void setErrorCode(int errorCode) {
+	this.errorCode = errorCode;
 }
 }
